@@ -1,0 +1,30 @@
+/* CSS Stylesheet for CIS124 Module 4 Lab */
+/* this is the css reset - make everything a standard */
+* {
+    /* this is the style element for the entire document */
+    font-size: 16px;
+    font-weight: normal;
+    /* fallback fonts are helvetica and a default sans-serif based font (comma seperated list) */
+    font-family: Roboto, helvetica, sans-serif;
+    color: black;
+}
+
+
+h1 {
+    font-size: 12pt;
+    color: #444444;
+    width: 50%;
+    margin: auto;
+}
+
+.container {
+    padding: 5px;
+    font-size: 10pt;
+    font-weight: bold;
+    color: midnightblue;
+
+
+
+}
+
+.offer {}
