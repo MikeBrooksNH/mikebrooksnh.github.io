@@ -1,0 +1,140 @@
+. {
+    font-family: cursive, fantasy, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --hfbgColor: rgb(155, 209, 211);
+}
+
+body {
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    color: #545454;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 2em 2em 4em;
+}
+
+button.inlinestyle {
+    display: inline;
+}
+
+.zest:hover {
+    display: inline;
+    font: serif;
+    font-size: 18pt;
+    text-emphasis: strong;
+
+    color: forestgreen;
+}
+
+.footerstyle {
+    background: linear-gradient(lightblue, blue);
+    /* background-color: var(--hfbgColor); */
+    bottom: 0;
+    color: black;
+    font-size: 8pt;
+    margin: auto;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.tableh1 {
+    color: #222;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-left: 30px;
+}
+
+header {
+    margin-top: 0px;
+    padding: 15px;
+    width: 100%;
+    height: 20pt;
+    position: fixed;
+    background: linear-gradient(blue, lightblue);
+    /* background-color: var(--hfbgColor); */
+    top: 0;
+}
+
+.navbar {
+    border: 2px outset green;
+    background-color: lightblue;
+    border-radius: 15px;
+    /* rounded corners */
+    font-size: 15pt;
+    margin-top: 20px;
+    padding: 5px 15px;
+    text-decoration-color: beige;
+}
+
+.navbar:hover {
+    background-color: wheat;
+}
+
+.company {
+    color: #222;
+    font-size: 14pt;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+span.highlight {
+    text-shadow: 0 0 3px red, 0 0 6px purple;
+}
+
+span.highlight:hover {
+    text-shadow: none;
+    text-emphasis: strong;
+}
+
+.title {
+    color: #222;
+    font-size: 12pt;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+.jobdescription {
+    font-size: 10pt;
+    line-height: 1.3;
+    padding-left: 20px;
+}
+
+.hiddenjobdesciption {
+    display: none;
+    /* Don't quite fully understand inheritence yet.. */
+    /* display: none; */
+    font-size: 10pt;
+    line-height: 1.3;
+    padding-left: 20px;
+}
+
+.jobdescription:hover + .hiddenjobdesciption {
+    display: block;
+}
+
+table,
+tr {
+    border: 1px solid black;
+    line-height: 2;
+    padding-left: 10px;
+    width: 85%;
+}
+
+table,
+td {
+    border: 1px solid black;
+    padding-left: 5px;
+}
+
+.strongli {
+    font-weight: bold
+}
