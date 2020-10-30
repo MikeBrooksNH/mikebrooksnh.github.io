@@ -2,5 +2,8 @@
 # CIS124 COURSE PROJECT #
 - Student Name: Mike Brooks
 - Date: 9/17/2020
+- Latest Revision: 10/25/2020
+-- Adding udemy certificate
+
 
 

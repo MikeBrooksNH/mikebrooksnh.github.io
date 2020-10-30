@@ -9,10 +9,11 @@
     <meta name="author" content="Wanna B. Dev">
     <title>Mike Brooks. Aspiring Web Developer</title>
     <link href="css/styles.css" type="text/css" rel="stylesheet">
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
 </head>
 
 <body>
+
     <header>
         <nav>
             <span class="navbar"><a href="index.html" target="_self">Home</a></span>
@@ -21,17 +22,46 @@
             <span class="navbar"><a href="contact.html" target="_self">Contact</a></span>
         </nav>
     </header>
+
     <main>
         <h1>Main Landing Page</h1>
 
-        <section id="security">
+        <section id="security" class="fleft">
             <h2>Cyber Security</h2>
             <p>A message from well known hacker <span class="highlight">Kevin Mitnick</span> and cybersecurity in these COVID-19 times</p>
-            <iframe width="683" height="384" src="https://www.youtube.com/embed/hLtDBhRNRAI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- <iframe width="683" height="384" src="https://www.youtube.com/embed/hLtDBhRNRAI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float:right"></iframe> -->
+            <div>
+                <iframe width="50%" height="33%" src="https://www.youtube.com/embed/hLtDBhRNRAI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float:right"></iframe>
+            </div>
+            <div id="secNarative" class="finnerleft">
+                <p>Kevin Mitnick is computer hacker turned security guru. Ghosts in the wire and Takedown choronicled Mitnick's hacker days. A teaser of the movie, made from Takedown can be found on <a href="https://www.amazon.com/Track-Down-Lionsgate/dp/B00G3NC7BI/ref=sr_1_2?dchild=1&keywords=takedown&qid=1604020851&s=instant-video&sr=1-2" target="_blank">Amazon</a></p>
+            </div>
+            <!-- The following is under development -->
+
+            <!--
+            <div class="lister">
+                <select Name="security" Size="5">
+                    <option value="https://www.youtube.com/embed/xvqrFPGIbE8"> All Day DevOps </option>
+                    <option> List item 2 </option>
+                    <option> List item 3 </option>
+                    <option> List item N </option>
+                </select>
+            </div>
+
+-->
+
             <hr>
         </section>
+        <section id="nature" class="fright">
+            <h2>Nature and Climate Change</h2>
+            <p>It's unfortunate this is happening in our world today. This is an example of how delicate the wold we live in is.</p>
+            <p class="finnerleft">I was able to witness this very real part of climate change on a trip to Alaska.</p>
 
-        <section id="devops">
+            <iframe width="50%" height="33%" src="https://www.youtube.com/embed/ToxTMaz0r2s" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+
+        <section id="devops" class="fleft">
             <h2>DevOps</h2>
             <p>One of the better DevOps Podcast... Arrested DevOps</p>
             <!-- It would be nice to have a list of episodes and have the audioplayer play the selected episode -->
@@ -40,13 +70,7 @@
         </section>
 
 
-        <section id="nature">
-            <h2>Nature and Climate Change</h2>
-            <p>It's unfortunate this is happening in our world today. This is an example of how delicate the wold we live in is.</p>
-            <p>I was able to witness this very real part of climate change on a trip to Alaska.</p>
 
-            <iframe width="800" height="640" src="https://www.youtube.com/embed/ToxTMaz0r2s" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
     </main>
     <footer class="footerstyle">
         <hr>
@@ -55,6 +79,4 @@
         </p>
     </footer>
 
-</body>
-
-</html>
+</body></html>

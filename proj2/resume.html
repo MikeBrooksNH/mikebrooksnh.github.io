@@ -9,10 +9,11 @@
     <meta name="author" content="Wanna B. Dev">
     <title>Mike Brooks. Resume</title>
     <link href="css/styles.css" type="text/css" rel="stylesheet">
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+
 </head>
 
-<body>
+<body onload="hidejobdescriptions()">
 
     <header>
         <nav>
@@ -27,22 +28,25 @@
         <h1>Resume of Michael A. Brooks</h1>
         <p><strong>Seasoned veteran of the software industry with a history of leading successful DevOps transitions</strong></p>
         <ul>
-            <li>More than 30 years of software industry experience</li>
-            <li>Passionate about getting things done</li>
-            <li>Diverse background of leadership and hands-on capabilities</li>
-            <li>Prided on having technical know-how and being a strong mentor and coach</li>
+            <li class="zest">More than 30 years of software industry experience</li>
+            <li class="zest">Passionate about getting things done</li>
+            <li class="zest">Diverse background of leadership and hands-on capabilities</li>
+            <li class="zest">Prided on having technical know-how and being a strong mentor and coach</li>
+            <li class="zest">Life long learner with a zest for knowledge</li>
+
         </ul>
 
         <p><a href="#workhistory" target="_self">Work History </a> | <a href="#education" target="_self"> Education</a></p>
-        <hr>
+
 
         <section id="workhistory">
             <h2>Work History</h2>
-            <article id="crd">
-                <h2 class="company">Charles River Development - Buirlington, MA</h2>
-                <h3 class="title">2019 - Present Team Lead, Release Engineering and DevOps</h3>
+            <p style="font-size: smaller">Click the company to see position information</p>
+            <article class="resumeHL" id="crd" onclick="hideunhide('crdJD')">
+                <h2 class="company">Charles River Development - Buirlington, MA - 2019 - Present</h2>
 
-                <div class="jobdescription">
+                <div id="crdJD" class="jobdescription">
+                    <h3 class="title">Team Lead, Release Engineering and DevOps</h3>
                     Leading the transition of an SDLC process using traditional Release Engineering to a more modern DevOps oriented delivery mentality. Moving away from traditional on-premise software to cloud based microservices in the public cloud.<br> Key Accomplishments
                     <ul>
                         <li>Extending Monitoring coverage to the Regression Suite systems</li>
@@ -54,22 +58,22 @@
                     </ul>
                 </div>
             </article>
-            <hr>
-
-            <article id="sovos">
-                <h2 class="company">Sovos Compliance. LLC - Wilmington, MA</h2>
-                <h3 class="title">2003 - 2019 Multiple Roles</h3>
-
-                <ol type="i" class="strongli">
-                    <li>2019 - CloudOps Manager, Automation Services</li>
-                    <li>2018 - 2019 Manager of Global Automation and Site Reliability Engineering</li>
-                    <li>2015 - 2018 Manager of Global DevOps</li>
-                    <li>2003 - 2015 Sr. Release Engineer</li>
-                </ol>
 
 
+            <article class="resumeHL" id="sovos" onclick="hideunhide('sovosJD')">
+                <h2 class="company">Sovos Compliance. LLC - Wilmington, MA - 2003 - 2019</h2>
 
-                <div class="jobdescription">
+                <div id="sovosJD" class="jobdescription">
+                    <h3 class="title"> Multiple Roles</h3>
+                    <ol type="i" class="strongli">
+                        <li>2019 - CloudOps Manager, Automation Services</li>
+                        <li>2018 - 2019 Manager of Global Automation and Site Reliability Engineering</li>
+                        <li>2015 - 2018 Manager of Global DevOps</li>
+                        <li>2003 - 2015 Sr. Release Engineer</li>
+                    </ol>
+
+
+
                     A global leader behind the automation of technology projecfonts – for development and operations. The role is also a direct liaison between all of the technology groups including InfoSec, Software and IT Architecture, Development, and the Various SaaS
                     Operations groups to ensure we maintain a high level of collaboration<br> Key Accomplishments
                     <ul>
@@ -84,12 +88,12 @@
                 </div>
             </article>
 
-            <hr>
-            <article id="sonus">
-                <h2 class="company">Sonus Networks, Inc. - Westford, MA</h2>
-                <h3 class="title">2001 - 2002 Senior Release Engineer</h3>
 
-                <div class="jobdescription">
+            <article class="resumeHL" id="sonus" onclick="hideunhide('sonusJD')">
+                <h2 class="company">Sonus Networks, Inc. - Westford, MA - 2001 - 2002</h2>
+
+                <div id="sonusJD" class="jobdescription">
+                    <h3 class="title"> Senior Release Engineer</h3>
                     Focus on ClearCase and ClearCase Multisite administration with a focus on build and release automation<br> Key Accomplishments
                     <ul>
                         <li>Automated the build process – reduced the need to continually monitor building software allowing release personnel to focus attention on other things</li>
@@ -100,15 +104,16 @@
                 </div>
             </article>
 
-            <hr>
-            <article id="shivaintel">
-                <h2 class="company">Shiva Corporation / Intel Network Systems - Bedford, MA</h2>
-                <h3 class="title">1997 - 2001 Senior Release Engineer</h3>
 
-                <div class="jobdescription">
+
+            <article class="resumeHL" id="shivaintel" onclick="hideunhide('shivaJD')">
+                <h2 class="company">Shiva Corporation / Intel Network Systems - Bedford, MA - 1997 - 2001 </h2>
+
+                <div id="shivaJD" class="jobdescription">
+                    <h3 class="title">Senior Release Engineer</h3>
                     Focus on ClearCase and ClearCase Multisite administration with a focus on build and release automation<br>
                     <!-- by clicking on "<strong>Key Accomplishments</strong>" label, the list of accomplishments should display -->
-                    <ul id="shiva" class="hiddenjobdesciption">
+                    <ul id="shiva" class="jobdesciption">
                         <li>Commissioned and Decommissioned remote sites from ClearCase MultiSite development</li>
                         <li>Converted Source control from Visual Source Safe to ClearCase</li>
                         <li>Implemented CD mastering station reducing the time to create CD-ROMs for QA to verify and Manufacturing to ship</li>
@@ -118,15 +123,16 @@
                 </div>
             </article>
 
-            <hr>
-            <article id="aimtech">
-                <h2 id="aimtech" class="company" onclick="unhide(aimtech)">Aimtech - Nashua, NH</h2>
-                <h3 class="title">1997 - Sofware Engineer (Release)</h3>
 
-                <div class="jobdescription">
+            <article class="resumeHL" id="aimtech" onclick="hideunhide('aimJD')">
+                <h2 id="aimtech" class="company">Aimtech - Nashua, NH - 1997</h2>
+
+                <div id="aimJD" class="jobdescription">
+                    <h3 class="title">Sofware Engineer (Release)</h3>
+
                     Focus automating the release processes and pre QA validation<br>
                     <!-- by clicking on "<strong>Key Accomplishments</strong>" label, the list of accomplishments should display -->
-                    <ul id="aim" class="hiddenjobdesciption">
+                    <ul id="aim" class="jobdescription">
                         <li>Wrote java code to test java add-in for the Jamba product (Java applet authoring tool). This became part of the example code that was delivered to customers</li>
                         <li>Defined the release process from development to QA and / or manufacturing</li>
                         <li>Automated build process</li>
@@ -136,26 +142,27 @@
                 </div>
             </article>
 
-            <hr>
-            <article id="telegraph">
-                <h2 class="company">Telegraph Publishing Company - Hudson, NH</h2>
-                <h3 class="title">1991 - 1997 Multiple Roles</h3>
 
-                <ol type="i" class="strongli">
-                    <li>Compmuter Technician</li>
-                    <li>Database Marketing Manager</li>
-                    <li>Programmer</li>
-                    <li>Computer Operator</li>
-                </ol>
+            <article class="resumeHL" id="telegraph" onclick="hideunhide('teleJD')">
+                <h2 class="company">Telegraph Publishing Company - Hudson, NH - 1991 - 1997</h2>
+                <div id="teleJD" class="jobdescription">
+                    <h3 class="title"> Multiple Roles</h3>
 
+                    <ol type="i" class="strongli">
+                        <li>Compmuter Technician</li>
+                        <li>Database Marketing Manager</li>
+                        <li>Programmer</li>
+                        <li>Computer Operator</li>
+                    </ol>
 
+                    <p>
 
-                <div class="jobdescription">
-                    Responsible for developing targeted marketing campaigns with sales agents by interfacing the customer database with advertiser demographic groups using GIS systems. Maintain the VAX and PDP systems and the inhouse software for all business systems.
+                        Responsible for developing targeted marketing campaigns with sales agents by interfacing the customer database with advertiser demographic groups using GIS systems. Maintain the VAX and PDP systems and the inhouse software for all business systems.
+                    </p>
                     <!-- by clicking on "<strong>Key Accomplishments</strong>" label, the list of accomplishments should display -->
-                </div>
-                <div>
-                    <ul id="telepub" class="hiddenjobdesciption">
+
+
+                    <ul id="telepub" class="jobdescription">
                         <li>Redesigned and coded the newsprint inventory system</li>
                         <li>Performed sustaining programming on the company’s payroll system</li>
                         <li>Instituted a marketing program to target customers based on geographic and demographic information – wrote a Visual Basic program to review various census block group demographic information with subscriber concentration.</li>
@@ -163,7 +170,73 @@
                         <li>Designed and wrote a system in Visual Basic that would cycle the photos received so as not have the disk space on the servers quickly consumed</li>
                         <li>Designed and implemented a system in Visual Basic that allowed reporters to dial into the company and deliver stories reliably – this system reduced the number of remote access problems considerably.</li>
                     </ul>
+                </div>
 
+            </article>
+
+        </section>
+
+
+        <section id="education">
+            <hr>
+            <h2>Education: Colleges and Universities</h2>
+
+            <article class="resumeHL" id="gbcc" onclick="hideunhide('gbccCW')">
+                <h2 class="company">Great Bay Community College - 2020</h2>
+                <div id="gbccCW">
+                    <h3 class="jobdescription">Currently enrolled in the Programming Certificate program</h3>
+                </div>
+            </article>
+
+            <article class="resumeHL" id="uml" onclick="hideunhide('umlCW')">
+                <h2 class="company">University of Massachusetts, Lowell - 2018</h2>
+                <div id="umlCW">
+                    <h3 class="jobdescription">Awarded Certificate in Java Development</h3>
+                </div>
+
+            </article>
+
+            <article class="resumeHL" id="dwc" onclick="hideunhide('dwcCW')">
+                <h2 class="company">Daniel Webster College - 2007</h2>
+                <div id="dwcCW">
+                    <h3 class="jobdescription">Awarded Certificate in C/ UNIX Programming</h3>
+                </div>
+            </article>
+
+            <article class="resumeHL" id="votech" onclick="hideunhide('votechCW')">
+                <h2 class="company">Nashua Vocational Technical College - 2001</h2>
+                <div id="votechCW">
+                    <ul class="jobdescription">
+                        <li>Introduction to JSP Programming</li>
+                        <li>Introduction to Java Programming</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="resumeHL" id="oxnard" onclick="hideunhide('oxnardCW')">
+                <h2 class="company">Oxnard College - 1989 - 1990</h2>
+                <div id="oxnardCW">
+                    <h3 class="jobdescription">Coursework in Management Information Systems</h3>
+                    <ul class="jobdescription">
+                        <li>Advanced Spreadsheets</li>
+                        <li>Systems Design &amp; Analysis</li>
+                        <li>Programming Principles &amp; Problem Solving</li>
+                        <li>Advanced Databases</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="resumeHL" id="ul" onclick="hideunhide('ulowellCW')">
+                <h2 class="company">University of Lowell</h2>
+                <div id="ulowellCW">
+                    <h3 class="jobdescription">Coursework in Computer Science</h3>
+                    <ul class="jobdescription">
+                        <li>BASIC</li>
+                        <li>FORTRAN</li>
+                        <li>Pascal and Problem Solving with Pascal</li>
+                        <li>College Algebra</li>
+                        <li>College Writting</li>
+                    </ul>
                 </div>
             </article>
 
@@ -173,106 +246,92 @@
 
         <section id="education">
             <hr>
-            <h2>Education and Professional Development</h2>
-            <h3 class="zest">Life long learner with a zest for knowledge</h3>
+            <h2>Education: Professional Development</h2>
 
-            <article id="gbcc">
-                <h2 class="company">Great Bay Community College - 2020</h2>
-                <h3 class="jobdescription">Currently enrolled in the Programming Certificate program</h3>
+            <article class="resumeHL" id="udemy" onclick="hideunhide('udemyCW')">
+                <h2 class="company">Udemy - 2020</h2>
+                <div id="udemyCW">
+                    <h3 class="jobdescription">Beginning Ansible</h3>
+                    <img src="./media/pictures/AnsibleBeginnerCertificate.jpg" alt="Ansible Certificate" style="">
+
+                </div>
             </article>
 
-            <article id="leads">
+            <article class="resumeHL" id="leads" onclick="hideunhide('sovosCW')">
                 <h2 class="company">SOVOS - 2019</h2>
-                <h3 class="jobdescription">Leadership Program (LEADS)</h3>
+                <div id="sovosCW">
+                    <h3 class="jobdescription">Leadership Program (LEADS)</h3>
+                </div>
             </article>
 
-            <article id="uml">
-                <h2 class="company">University of Massachusetts, Lowell - 2018</h2>
-                <h3 class="jobdescription">Awarded Certificate in Java Development</h3>
-            </article>
-
-            <article id="blackduck">
+            <article class="resumeHL" id="blackduck" onclick="hideunhide('bduckCW')">
                 <h2 class="company">Black Duck Hub Security Scanning - 2017</h2>
-                <h3 class="jobdescription">Black Duck Hub Fundamentals</h3>
+                <div id="bduckCW">
+
+                    <h3 class="jobdescription">Black Duck Hub Fundamentals</h3>
+                </div>
             </article>
 
-            <article id="puppet">
+            <article class="resumeHL" id="puppet" onclick="hideunhide('puppetCW')">
                 <h2 class="company">Puppet Labs - 2015</h2>
-                <h3 class="jobdescription">Puppet Fundamentals</h3>
+                <div id="puppetCW">
+                    <h3 class="jobdescription">Puppet Fundamentals</h3>
+                </div>
             </article>
 
-            <article id="dwc">
-                <h2 class="company">Daniel Webster College - 2007</h2>
-                <h3 class="jobdescription">Awarded Certificate in C/ UNIX Programming</h3>
-            </article>
-
-            <article id="votech">
-                <h2 class="company">Nashua Vocational Technical College - 2001</h2>
-                <ul class="jobdescription">
-                    <li>Introduction to JSP Programming</li>
-                    <li>Introduction to Java Programming</li>
-                </ul>
-            </article>
-
-            <article id="oxnard">
-                <h2 class="company">Oxnard College - 1989 - 1990</h2>
-                <h3 class="jobdescription">Coursework in Management Information Systems</h3>
-                <ul class="jobdescription">
-                    <li>Advanced Spreadsheets</li>
-                    <li>Systems Design &amp; Analysis</li>
-                    <li>Programming Principles &amp; Problem Solving</li>
-                    <li>Advanced Databases</li>
-                </ul>
-            </article>
-
-            <article id="ul">
-                <h2 class="company">University of Lowell</h2>
-                <h3 class="jobdescription">Coursework in Computer Science</h3>
-                <ul class="jobdescription">
-                    <li>BASIC</li>
-                    <li>FORTRAN</li>
-                    <li>Pascal and Problem Solving with Pascal</li>
-                    <li>College Algebra</li>
-                    <li>College Writting</li>
-                </ul>
-            </article>
-
-            <article id="rational">
+            <article class="resumeHL" id="rational" onclick="hideunhide('rationalCW')">
                 <h2 class="company">Rational University</h2>
-                <h3 class="jobdescription">Education for Rational Tools Suite</h3>
-                <ul class="jobdescription">
-                    <li>ClearCase Fundamentals</li>
-                    <li>ClearCase Planning and Metadata</li>
-                    <li>ClearCase Administration
-                        <ol type="i">
-                            <li>Standard administration</li>
-                            <li>Selected as a beta tester for next version of the training</li>
-                        </ol>
-                    </li>
-                    <li>ClearQuest Administration</li>
-                </ul>
+                <div id="rationalCW">
+                    <h3 class="jobdescription">Education for Rational Tools Suite</h3>
+                    <ul class="jobdescription">
+                        <li>ClearCase Fundamentals</li>
+                        <li>ClearCase Planning and Metadata</li>
+                        <li>ClearCase Administration
+                            <ol type="i">
+                                <li>Standard administration</li>
+                                <li>Selected as a beta tester for next version of the training</li>
+                            </ol>
+                        </li>
+                        <li>ClearQuest Administration</li>
+                    </ul>
+                </div>
             </article>
 
-            <article id="installshield">
+            <article class="resumeHL" id="installshield" onclick="hideunhide('ishieldCW')">
                 <h2 class="company">InstallShield</h2>
-                <h3 class="jobdescription">Product training for InstallShield Installer</h3>
-                <ul class="jobdescription">
-                    <li>InstallShield InstallScript</li>
-                    <li>Advanced InstallShield</li>
-                </ul>
+                <div id="ishieldCW">
+                    <h3 class="jobdescription">Product training for InstallShield Installer</h3>
+                    <ul class="jobdescription">
+                        <li>InstallShield InstallScript</li>
+                        <li>Advanced InstallShield</li>
+                    </ul>
+                </div>
             </article>
 
-            <article id="sybase">
+            <article class="resumeHL" id="sybase" onclick="hideunhide('sybaseCW')">
                 <h2 class="company">Sybase</h2>
-                <h3 class="jobdescription">Fast Track to Sybase</h3>
+                <div id="sybaseCW">
+                    <h3 class="jobdescription">Fast Track to Sybase</h3>
+                </div>
             </article>
-
-            <article id="misc">
+            <article class="resumeHL" id="misc" onclick="hideunhide('corespondenceCW')">
                 <h2 class="company">Various technology related correspondence courses</h2>
+                <div id="corespondenceCW">
+                    <ul class="jobdescription">
+                        <li>C++ for Windows</li>
+                        <li>Microcomputers and Microprocessors</li>
+                        <li>Accounting</li>
+                        <li>Basic Electronics</li>
+                        <li>Contempory Electronics</li>
+                        <li>Contempory Software Development</li>
+                    </ul>
+                </div>
             </article>
 
 
         </section>
+
+
     </main>
 
     <footer class="footerstyle">

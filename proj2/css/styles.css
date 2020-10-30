@@ -4,6 +4,7 @@
 
 :root {
     --hfbgColor: rgb(155, 209, 211);
+    --highlightColor: wheat;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     color: #545454;
     font-size: 16px;
+    /* this needs to change */
     line-height: 1.5;
     margin: 0 auto;
     max-width: 800px;
@@ -21,13 +23,59 @@ button.inlinestyle {
     display: inline;
 }
 
-.zest:hover {
-    display: inline;
-    font: serif;
-    font-size: 18pt;
-    text-emphasis: strong;
+header {
+    margin-top: 0px;
+    padding: 15px;
+    width: 100%;
+    height: 20pt;
+    position: fixed;
+    background: linear-gradient(blue, var(--hfbgColor));
+    /* background-color: var(--hfbgColor); */
+    top: 0;
+}
 
-    color: forestgreen;
+img {
+    width: 75%;
+    height: auto;
+}
+
+table,
+tr {
+    border: 1px solid black;
+    line-height: 2;
+    padding-left: 10px;
+    width: 85%;
+}
+
+table,
+td {
+    border: 1px solid black;
+    padding-left: 5px;
+}
+
+section {
+    /*border-top: 2px inset black;*/
+    float: none;
+    /*margin-top: 5px;
+    padding-top: 2px; */
+}
+
+span.highlight {
+    text-shadow: 0 0 3px red, 0 0 6px purple;
+}
+
+span.highlight:hover {
+    text-shadow: none;
+    text-emphasis: strong;
+}
+
+.company {
+    color: #222;
+    font-size: 14pt;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-left: 10px;
+    padding-right: 30px;
 }
 
 .footerstyle {
@@ -42,64 +90,39 @@ button.inlinestyle {
     width: 100%;
 }
 
-.tableh1 {
-    color: #222;
-    font-weight: 600;
-    line-height: 1.3;
-    padding-left: 30px;
+.fleft {
+    /* border-top: 2px outset black;
+    border-bottom: 2px inset black;
+    border-right: 2px outset black; */
+    float: left;
+    width: 50%
 }
 
-header {
-    margin-top: 0px;
-    padding: 15px;
-    width: 100%;
-    height: 20pt;
-    position: fixed;
-    background: linear-gradient(blue, lightblue);
-    /* background-color: var(--hfbgColor); */
-    top: 0;
+.finnerleft {
+    /* border-top: 2px outset black;
+    border-bottom: 2px inset black;
+    border-right: 2px outset black;*/
+    float: left;
+    width: 40%
 }
 
-.navbar {
-    border: 2px outset green;
-    background-color: lightblue;
-    border-radius: 15px;
-    /* rounded corners */
-    font-size: 15pt;
-    margin-top: 20px;
-    padding: 5px 15px;
-    text-decoration-color: beige;
+.fright {
+    /*border-top: 2px outset black;
+    border-bottom: 2px inset black;*/
+    border-left: 2px outset black;
+    float: right;
+
+    padding-left:3px;
+    width: 45%
 }
 
-.navbar:hover {
-    background-color: wheat;
-}
+.finnerright {
+    /*border-top: 2px outset black;
+    border-bottom: 2px inset black;*/
+    border-left: 2px outset black;
+    float: right;
 
-.company {
-    color: #222;
-    font-size: 14pt;
-    font-weight: 600;
-    line-height: 1.3;
-    padding-left: 10px;
-    padding-right: 30px;
-}
-
-span.highlight {
-    text-shadow: 0 0 3px red, 0 0 6px purple;
-}
-
-span.highlight:hover {
-    text-shadow: none;
-    text-emphasis: strong;
-}
-
-.title {
-    color: #222;
-    font-size: 12pt;
-    font-weight: 600;
-    line-height: 1.3;
-    padding-left: 10px;
-    padding-right: 30px;
+    width: 45%
 }
 
 .jobdescription {
@@ -117,24 +140,60 @@ span.highlight:hover {
     padding-left: 20px;
 }
 
+.hiddenimage {
+
+    display: none;
+}
+
 .jobdescription:hover + .hiddenjobdesciption {
     display: block;
 }
 
-table,
-tr {
-    border: 1px solid black;
-    line-height: 2;
-    padding-left: 10px;
-    width: 85%;
+.navbar {
+    border: 2px outset green;
+    background-color: lightblue;
+    border-radius: 15px;
+    /* rounded corners */
+    font-size: 15pt;
+    margin-top: 20px;
+    padding: 5px 15px;
+    text-decoration-color: beige;
 }
 
-table,
-td {
-    border: 1px solid black;
-    padding-left: 5px;
+.navbar:hover {
+    background-color: wheat;
+}
+
+.resumeHL:hover {
+    /* High level items on the resume will have a visual hint that they are clickable */
+    background-color: var(--highlightColor);
 }
 
 .strongli {
     font-weight: bold
+}
+
+.tableh1 {
+    color: #222;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-left: 30px;
+}
+
+.title {
+    color: #222;
+    font-size: 12pt;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+.zest:hover {
+    display: inline;
+    font: serif;
+    font-size: 18pt;
+    text-emphasis: strong;
+
+    color: forestgreen;
 }
