@@ -1,0 +1,130 @@
+. {
+    font-family: cursive, fantasy, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+:root {
+
+    --footercolor: black;
+    --bodybgcolor: white;
+    --bodyfontcolor: grey;
+
+    /* background colors */
+    --stdBGDesktop1: lightBlue;
+    --stdBGDesktop2: wheat;
+    --stdBGTablet: grey;
+    --landscapeBG: aqua;
+    --landscapeFG: brown;
+    --hfbgColor: rgb(155, 209, 211);
+    --highlightColor: wheat;
+    --companyLinkColor: blue;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1em;
+}
+
+body {
+    background: var(--bodybgcolor);
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.06);
+    color: ;
+    margin: 0 auto;
+    padding: 2em 2em 4em;
+}
+
+footer {
+    color: var(--footertcolor);
+}
+
+
+header {
+    margin-top: .25rem;
+    padding: .5rem;
+    width: 90%;
+    height: calc(1.5rem * 1.25vw);
+    position: fixed;
+    background: linear-gradient(blue, var(--hfbgColor));
+    /* background-color: var(--hfbgColor); */
+    top: 0;
+}
+
+.footerstyle {
+    background: linear-gradient(lightblue, blue);
+    bottom: 0;
+    color: var(--footercolor);
+    /*   font-size: .5rem; */
+    margin: auto;
+    position: fixed;
+    text-align: center;
+    width: 90%;
+}
+
+.navbar {
+    border: .25rem outset green;
+    background-color: lightblue;
+    border-radius: .5rem;
+    margin-top: .2rem;
+    padding: .3rem;
+    text-decoration-color: beige;
+}
+
+.navbar:hover {
+    background-color: wheat;
+}
+
+
+@media only screen and (min-width: 580px) {
+
+    /* First breakpoint for tablet view */
+    main {
+        /* need to keep some leading when scaling the font size */
+        line-height: calc(1.5rem + 1vw);
+    }
+
+    body {
+        background: var(--stdBGTablet);
+        font-size: calc(1rem + 2vw);
+
+    }
+
+    footer {
+        font-size: calc(.25rem + 1vw);
+        color: var(--footercolor);
+    }
+}
+
+@media only screen and (min-width: 640px) and (orientation: landscape) {
+
+    /* breakpoint for mobile phone in landscape mode */
+    body {
+        font-size: calc(1rem + 2vw);
+        line-height: calc(1.5rem * 2vw);
+        background: var(--landscapeBG);
+        color: var(--landscapeFG);
+    }
+
+    footer {
+        font-size: calc(.25rem + 1vw);
+        color: var(--footercolor);
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    /* Second breakpoint for desktop view */
+    body {
+        font-size: c alc(1rem + 2vw);
+        line-height: calc(1.5rem * 2vw);
+        background: var(--stdBGDesktop2);
+    }
+
+    footer {
+        font-size: calc(.25rem + 1vw);
+        color: var(--footercolor);
+    }
+}
