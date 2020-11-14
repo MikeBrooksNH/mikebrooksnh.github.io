@@ -13,7 +13,7 @@
     <script src="js/scripts.js"></script>
 </head>
 
-<body onload="detectMob();setInterval(showimages,1500)">
+<body onload="detectMob()">
     <header>
         <nav>
             <span class="navbar"><a href="index.html" target="_self">Home</a></span>
@@ -34,9 +34,14 @@
             Anytown, ST 12345<br>
             mab@mab.me<br>
         </address>
+
+        <button onclick="clearInterval(myIntervalTimer)">Stop Scrolling Images</button>
+        <!--     <button onclick="setInterval(showimages, 2000)">Resume Scrolling Images</button> -->
     </main>
     <footer class="footerstyle">
         <p>&copy;Michael A. Brooks 2020</p>
     </footer>
 
-</body></html>
+</body>
+
+</html>

@@ -1,4 +1,9 @@
 /* JavaScript document */
+
+var myIntervalTimer = setInterval(showimages, 2000);
+
+
+
 function lastupdated() {
     var x = document.lastModified;
     document.getElementById("lastupdated").innerHTML = x;
