@@ -70,7 +70,7 @@ function detectMob() {
     if (i = < toMatch.length)
         device = "Mobile";
 */
-    document.getElementById("devtype").innerHTML = navigator.userAgent;
+    document.getElementById("devtype").innerHTML = navigator.platform;
 
 
 }
