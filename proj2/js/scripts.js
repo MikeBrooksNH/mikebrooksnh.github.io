@@ -35,6 +35,7 @@ function hidejobdescriptions() {
         "sybaseCW", "udemyCW", "corespondenceCW"
               ];
 
+    var i;
     for (i = 0; i < jds.length; i++) {
         try {
             hideunhide(jds[i]);
@@ -43,5 +44,33 @@ function hidejobdescriptions() {
         }
 
     }
+
+}
+
+function detectMob() {
+
+    /*  document.getElementById("devtype").innerText = "test";
+
+
+    var toMatch = [
+          /Android/i,
+          /webOS/i,
+          /iPhone/i,
+          /iPad/i,
+          /iPod/i,
+          /BlackBerry/i,
+          /Windows Phone/i
+      ];
+
+    var device = "Not Mobile";
+    var i;
+    for (i = 0; i <= toMatch.length; i++)
+        if (navigator.userAgent.match(toMatchItem))
+            break;
+    if (i = < toMatch.length)
+        device = "Mobile";
+*/
+    document.getElementById("devtype").innerHTML = navigator.userAgent;
+
 
 }
