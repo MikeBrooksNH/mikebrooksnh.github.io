@@ -48,13 +48,23 @@ function hidejobdescriptions() {
 }
 
 function detectMob() {
-
-
+    // this function is used to check if the site is hit from a mobile browser or a desktop browser.
+    // It is also the intention that this functino be called on load for every page on the site
 
     if (navigator.userAgent.match(/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone/i)) {
         document.getElementById("devtype").innerText = "Mobile device";
     } else {
         document.getElementById("devtype").innerText = "Non-Mobile device";
     }
+}
+
+function showimages() {
+    var images = [
+        "artifactory.png", "bitbucket.png", "blackduck.png", "c.png", "confluence.png", "cpp.png", "devops.jpg", "git.png", "github.png", "java.png", "jenkins.png", "jira.png", "linux.jpg", "perforce.png", "puppet.png", "python.png", "sonatype.jpg", "teamcity.png", "windows.png"
+                 ];
+
+    var idx = Math.random() * 19;
+
+    document.getElementById("rotateimg").innerHTML = "<img src=img/" + images[parseInt(idx)] + " alt=\"generated image" + parseInt(idx) + "\" style=\"width=.25vw;transition-timing-function: ease-in-out 5s;\">";
 
 }
