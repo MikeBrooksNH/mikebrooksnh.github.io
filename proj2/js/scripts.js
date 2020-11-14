@@ -49,28 +49,11 @@ function hidejobdescriptions() {
 
 function detectMob() {
 
-    /*  document.getElementById("devtype").innerText = "test";
 
-
-    var toMatch = [
-          /Android/i,
-          /webOS/i,
-          /iPhone/i,
-          /iPad/i,
-          /iPod/i,
-          /BlackBerry/i,
-          /Windows Phone/i
-      ];
-
-    var device = "Not Mobile";
-    var i;
-    for (i = 0; i <= toMatch.length; i++)
-        if (navigator.userAgent.match(toMatchItem))
-            break;
-    if (i = < toMatch.length)
-        device = "Mobile";
-*/
-    document.getElementById("devtype").innerHTML = navigator.platform;
-
+    if (navigator.platform.match(/win32|macintel/i)) {
+        document.getElementById("devtype").innerText = "Non-mobile device";
+    } else {
+        document.getElementById("devtype").innerText = "Mobile device";
+    }
 
 }
