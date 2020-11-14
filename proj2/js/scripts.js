@@ -50,10 +50,11 @@ function hidejobdescriptions() {
 function detectMob() {
 
 
-    if (navigator.platform.match(/win32|macintel/i)) {
-        document.getElementById("devtype").innerText = "Non-mobile device";
-    } else {
+
+    if (navigator.userAgent.match(/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone/i)) {
         document.getElementById("devtype").innerText = "Mobile device";
+    } else {
+        document.getElementById("devtype").innerText = "Non-Mobile device";
     }
 
 }
