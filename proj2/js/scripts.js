@@ -1,7 +1,11 @@
-/* JavaScript document */
+/*
 
-var myIntervalTimer = setInterval(showimages, 2000);
+Project:  GBCC Web Dev I Class project
+Filename: scripts.js
 
+*/
+var myIntervalTimer = setInterval(showimages, 4000);
+var whichDiv = 1;
 
 
 function lastupdated() {
@@ -64,12 +68,27 @@ function detectMob() {
 }
 
 function showimages() {
+
+    var imgcnt = 29;
     var images = [
-        "artifactory.png", "bitbucket.png", "blackduck.png", "c.png", "confluence.png", "cpp.png", "devops.jpg", "git.png", "github.png", "java.png", "jenkins.png", "jira.png", "linux.jpg", "perforce.png", "puppet.png", "python.png", "sonatype.jpg", "teamcity.png", "windows.png"
+        "artifactory.png", "bitbucket.png", "blackduck.png", "c.png", "confluence.png", "cpp.png", "devops.jpg", "git.png", "github.png", "java.png", "jenkins.png", "jira.png", "linux.jpg", "perforce.png", "puppet.png", "python.png", "sonatype.jpg", "teamcity.png", "windows.png", "docker.png", "sqlserver.jpg", "mysql.jpg", "vmware.jpg", "ruby.jpg", "cs.jpg", "ansible.png", "aws.png", "html.png", "css.png"
                  ];
 
-    var idx = Math.random() * 19;
+    var idx = Math.random() * imgcnt;
 
-    document.getElementById("rotateimg").innerHTML = "<img src=img/" + images[parseInt(idx)] + " alt=\"generated image" + parseInt(idx) + "\" style=\"width=.25vw;transition-timing-function: ease-in-out 5s;\">";
+    if (whichDiv === 1) {
+        document.getElementById("rotateimg2").innerHTML = "";
+
+        document.getElementById("rotateimg1").innerHTML = "<img src=img/" + images[parseInt(idx)] + " alt=\"generated image" + parseInt(idx) + "\" class=\"fadeinout techicons\">";
+
+        whichDiv = 2;
+    } else {
+        document.getElementById("rotateimg1").innerHTML = "";
+
+        document.getElementById("rotateimg2").innerHTML = "<img src=img/" + images[parseInt(idx)] + " alt=\"generated image" + parseInt(idx) + "\" class=\"fadeinout techicons\">";
+
+        whichDiv = 1;
+
+    }
 
 }

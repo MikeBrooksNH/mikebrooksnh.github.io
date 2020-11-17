@@ -1,5 +1,13 @@
-. {
+/*
+
+Project:  GBCC Web Dev I Class project
+Filename: main.css
+
+*/
+/* There are known issues with the validator and the calc function... */
+* {
     font-family: cursive, fantasy, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
@@ -14,15 +22,12 @@
     --stdBGTablet: grey;
     --landscapeBG: aqua;
     --landscapeFG: brown;
-    --hfbgColor: rgb(155, 209, 211);
+    --hfbgColor: lightblue;
     --highlightColor: wheat;
     --companyLinkColor: blue;
 
 }
 
-* {
-    box-sizing: border-box;
-}
 
 html {
     font-size: 1em;
@@ -31,7 +36,7 @@ html {
 body {
     background: var(--bodybgcolor);
     box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.06);
-    color: ;
+    color: black;
     margin: 0 auto;
     padding: 2em 2em 4em;
 }
@@ -42,21 +47,23 @@ footer {
 
 
 header {
-    margin-top: .25rem;
-    padding: .5rem;
+    margin-top: .2rem;
+    padding: .25rem;
     width: 90%;
-    height: calc(1.5rem * 1.25vw);
+    height: calc(1.5rem + 1.3vw);
     position: fixed;
-    background: linear-gradient(blue, var(--hfbgColor));
+    /* this fails when a var(--hfbgColor) is put in place of lightblue */
+    background: linear-gradient(blue, lightblue);
     /* background-color: var(--hfbgColor); */
     top: 0;
 }
 
 .footerstyle {
+
     background: linear-gradient(lightblue, blue);
     bottom: 0;
     color: var(--footercolor);
-    /*   font-size: .5rem; */
+    font-size: calc(.25rem + .5vw);
     margin: auto;
     position: fixed;
     text-align: center;
@@ -64,17 +71,47 @@ header {
 }
 
 .navbar {
+
+    /* There is an issue with overlapping buttons on the galaxy fold */
     border: .25rem outset green;
     background-color: lightblue;
     border-radius: .5rem;
-    margin-top: .2rem;
-    padding: .3rem;
+    margin-top: 0;
+    padding: .1rem;
     text-decoration-color: beige;
 }
 
 .navbar:hover {
     background-color: wheat;
 }
+
+.techicons {
+    max-width: 100px;
+}
+
+.fadeinout {
+    animation-name: fadein-out;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes fadein-out {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
 
 
 @media only screen and (min-width: 580px) {
@@ -92,7 +129,7 @@ header {
     }
 
     footer {
-        font-size: calc(.25rem + 1vw);
+        font-size: calc(.25rem + .5vw);
         color: var(--footercolor);
     }
 }
@@ -101,14 +138,14 @@ header {
 
     /* breakpoint for mobile phone in landscape mode */
     body {
-        font-size: calc(1rem + 2vw);
-        line-height: calc(1.5rem * 2vw);
+        font-size: calc(1rem + 1.5vw);
+        line-height: calc(1.5rem + 2vw);
         background: var(--landscapeBG);
         color: var(--landscapeFG);
     }
 
     footer {
-        font-size: calc(.25rem + 1vw);
+        font-size: calc(.25rem + .5vw);
         color: var(--footercolor);
     }
 }
@@ -118,13 +155,13 @@ header {
 
     /* Second breakpoint for desktop view */
     body {
-        font-size: calc(1rem + 2vw);
-        line-height: calc(1.5rem * 2vw);
+        font-size: calc(1rem + 1.75vw);
+        line-height: calc(1.5rem + 2vw);
         background: var(--stdBGDesktop2);
     }
 
     footer {
-        font-size: calc(.25rem + 1vw);
+        font-size: calc(.25rem + .5vw);
         color: var(--footercolor);
     }
 }
