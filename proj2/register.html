@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+Project:  GBCC Web Dev I Class project
+Filename: register.html
+
+Requirements:
+
+Provide input elements for a user's
+    full name
+    email address
+    telephone number
+    birthday.
+    Provide a text area element
+        - multi-line text message to enter a comment or question.
+
+
+The user must create a password using two password input fields. The form must validate that the user has entered the same password in both fields.
+All fields are required.
+Use the following URL as the action for your form: http://greatbay.cc (Links to an external site.)
+The form must use the POST method.
+
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A web page for Mike Brooks, Computer Professional">
+    <meta name="keywords" content="DevOps,Release Engineering,Developer,SaaS Operations">
+    <meta name="author" content="Wanna B. Dev">
+    <title>Mike Brooks. Registration Page</title>
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <script src="js/scripts.js"></script>
+    <script src="js/register.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span class="navbar"><a href="index.html" target="_self">Home</a></span>
+            <span class="navbar"><a href="projects.html" target="_self">Projects</a></span>
+            <span class="navbar"><a href="resume.html" target="_self">Resume</a></span>
+            <span class="navbar"><a href="contact.html" target="_self">Contact</a></span>
+            <span class="navbar"><a href="register.html" target="_self">Register</a></span>
+        </nav>
+    </header>
+    <main>
+        <form style="margin-bottom: 2em; margin-top: 2em;" action=" https://greatbay.cc" target="_blank" method="POST">
+            <p>Register to get updates on services </p>
+            <div>
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" maxlength="50" required>
+            </div>
+
+            <div>
+                <label for="birthday">Birthday</label>
+                <input type="date" id="birthday" name="birthday" maxlength="10" pattern="MM/DD/YYYY" required>
+            </div>
+
+            <div>
+                <label for="useremail">email</label>
+                <input type="email" id="useremail" name="useremail" placeholder="user@domain.com" required>
+            </div>
+            <div>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div>
+                <label for="password2">Retype Password</label>
+                <input type="password" id="password2" name="password2" required>
+            </div>
+
+            <div>
+                <textarea placeholder="Comments or Questions" id="comment" name="comment" rows="5" cols="40" required></textarea>
+            </div>
+
+            <div id="formErrors"></div>
+
+            <div>
+                <button type=submit id="submit">Submit</button>
+                <button type=reset>Reset Form</button>
+
+            </div>
+        </form>
+        <br>
+        <p>Tech I have experience with</p>
+
+        <button class="navbar" onclick="clearInterval(myIntervalTimer)">Stop Scrolling Images</button><br>
+        <div id="rotateimg1" style="float: left; margin-top: 1rem;padding-bottom: 100px"></div>
+        <div id="rotateimg2" style="float: right; margin-top: 1rem;padding-bottom: 100px"></div>
+
+        <br>
+    </main>
+    <footer class="footerstyle">
+        <p>&copy;Michael A. Brooks 2020</p>
+    </footer>
+
+</body>
+
+</html>

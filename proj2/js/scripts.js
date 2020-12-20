@@ -4,15 +4,20 @@ Project:  GBCC Web Dev I Class project
 Filename: scripts.js
 
 */
+
 var myIntervalTimer = setInterval(showimages, 4000);
 var whichDiv = 1;
 
+/*
 
-function lastupdated() {
-    var x = document.lastModified;
-    document.getElementById("lastupdated").innerHTML = x;
-}
+    General Routines - used anywhere on the site
 
+*/
+/*
+
+    Routines specific to handling the resume
+
+*/
 function hideunhide(elemid) {
     // The intent for this functionis to allow an element to be hiden or made visible
 
@@ -56,17 +61,12 @@ function hidejobdescriptions() {
 
 }
 
-function detectMob() {
-    // this function is used to check if the site is hit from a mobile browser or a desktop browser.
-    // It is also the intention that this functino be called on load for every page on the site
 
-    if (navigator.userAgent.match(/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone/i)) {
-        document.getElementById("devtype").innerText = "Mobile device";
-    } else {
-        document.getElementById("devtype").innerText = "Non-Mobile device";
-    }
-}
+/*
 
+    Routines specific to the project and contact pages
+
+*/
 function showimages() {
 
     var imgcnt = 29;
@@ -90,5 +90,11 @@ function showimages() {
         whichDiv = 1;
 
     }
-
 }
+
+
+/*
+
+    Routines for managing form data
+
+*/
