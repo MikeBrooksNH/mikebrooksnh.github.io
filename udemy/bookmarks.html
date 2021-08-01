@@ -73,10 +73,15 @@
     <div>
 
         <h1>Articles</h1>
-        <p> TARGET_HOST=[hostname or IP] # Remove the old key(s) from known_hosts ssh-keygen -R $TARGET_HOST # Add the new key(s)
-            to known_hosts (and also hash the hostname/address) ssh-keyscan -H $TARGET_HOST >> ~/.ssh/known_hosts The next
-            time you connect, you'll connect **without** being asked `Are you sure you want to continue connecting (yes/no)?`
-            since the keys will already be in the `known_hosts` file
+        <p> TARGET_HOST=[hostname or IP]<br>
+            # Remove the old key(s) from known_hosts <br>
+            ssh-keygen -R $TARGET_HOST <br>
+            <br>
+            # Add the new key(s) to known_hosts (and also hash the hostname/address) <br>
+            ssh-keyscan -H $TARGET_HOST >> ~/.ssh/known_hosts <br>
+            <br>
+            The next time you connect, you'll connect **without** being asked `Are you sure you want to continue connecting (yes/no)?`<br>
+            since the keys will already be in the `known_hosts` file<br>
         </p><br>
 
         <p>
