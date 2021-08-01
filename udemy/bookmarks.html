@@ -73,17 +73,16 @@
     <div>
 
         <h1>Articles</h1>
-        <p> TARGET_HOST=[hostname or IP]<br>
-            # Remove the old key(s) from known_hosts <br>
-            ssh-keygen -R $TARGET_HOST <br>
-            <br>
-            # Add the new key(s) to known_hosts (and also hash the hostname/address) <br>
-            ssh-keyscan -H $TARGET_HOST >> ~/.ssh/known_hosts <br>
-            <br>
-            The next time you connect, you'll connect **without** being asked `Are you sure you want to continue connecting (yes/no)?`<br>
-            since the keys will already be in the `known_hosts` file<br>
+        <br>
+        <hr>
+        <p>
+            TARGET_HOST=[hostname or IP]<br> # Remove the old key(s) from known_hosts <br> ssh-keygen -R $TARGET_HOST <br>
+            <br> # Add the new key(s) to known_hosts (and also hash the hostname/address) <br> ssh-keyscan -H $TARGET_HOST
+            >> ~/.ssh/known_hosts <br>
+            <br> The next time you connect, you'll connect **without** being asked `Are you sure you want to continue connecting
+            (yes/no)?`<br> since the keys will already be in the `known_hosts` file<br>
         </p><br>
-
+        <hr>
         <p>
             This one of the articles that is clared a &quot must read &quot by Dr. Angela. While this may <br> be a great
             article, there looks to be a ton of great informatino on this blog site.<br><br>
