@@ -4,18 +4,19 @@ Project:  GBCC Web Dev I Class project
 Filename: main.css
 
 */
+
 /* There are known issues with the validator and the calc function... */
+
 * {
-    font-family: cursive, fantasy, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* cursive, fantasy, "Helvetica Neue",  */
+    font-family: Helvetica, Arial, sans-serif;
     box-sizing: border-box;
 }
 
 :root {
-
     --footercolor: black;
     --bodybgcolor: white;
     --bodyfontcolor: grey;
-
     /* background colors */
     --stdBGDesktop1: lightBlue;
     --stdBGDesktop2: wheat;
@@ -25,9 +26,7 @@ Filename: main.css
     --hfbgColor: lightblue;
     --highlightColor: wheat;
     --companyLinkColor: blue;
-
 }
-
 
 html {
     font-size: 1em;
@@ -45,7 +44,6 @@ footer {
     color: var(--footertcolor);
 }
 
-
 header {
     margin-top: .2rem;
     padding: .25rem;
@@ -59,7 +57,6 @@ header {
 }
 
 .footerstyle {
-
     background: linear-gradient(lightblue, blue);
     bottom: 0;
     color: var(--footercolor);
@@ -74,8 +71,12 @@ header {
     margin-left: calc(2rem + .5vw);
     padding-left: 15px;
 }
-.navbar {
+.indent2 {
+    margin-left: calc(3rem + .5vw);
+    padding-left: 20px;
+}
 
+.navbar {
     /* There is an issue with overlapping buttons on the galaxy fold */
     border: .25rem outset green;
     background-color: lightblue;
@@ -99,39 +100,28 @@ header {
     animation-iteration-count: 1;
 }
 
-
 @keyframes fadein-out {
-
     0% {
         opacity: 0;
     }
-
     50% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
     }
-
 }
 
-
-
-@media only screen and (min-width: 580px) {
-
+@media only screen and (min-width: 580px) and (max-width: 640px) {
     /* First breakpoint for tablet view */
     main {
         /* need to keep some leading when scaling the font size */
         line-height: calc(1.5rem + 1vw);
     }
-
     body {
         /* background: var(--stdBGTablet); */
         font-size: calc(1rem + 2vw);
-
     }
-
     footer {
         font-size: calc(.25rem + .5vw);
         /* color: var(--footercolor); */
@@ -139,31 +129,26 @@ header {
 }
 
 @media only screen and (min-width: 640px) and (orientation: landscape) {
-
     /* breakpoint for mobile phone in landscape mode */
     body {
         font-size: calc(1rem + 1.5vw);
         line-height: calc(1.5rem + 1vw);
-        /* background: var(--landscapeBG); */
-        /* color: var(--landscapeFG); */
+        /* background: var(--landscapeBG);  */
+        /* color: var(--landscapeFG);  */
     }
-
     footer {
-        font-size: calc(.25rem + .5vw);
-        /* color: var(--footercolor); */
+        font-size: calc(.75rem + .5vw);
+        /* color: var(--footercolor);*/
     }
 }
 
-
 @media only screen and (min-width: 1024px) {
-
     /* Second breakpoint for desktop view */
     body {
         font-size: calc(1rem + 1vw);
-        line-height: calc(1.5rem + 1.5vw);
-        /* background: var(--stdBGDesktop2); */
+        line-height: calc(1rem + 1.5vw);
+        /* background: var(--stdBGDesktop2);  */
     }
-
     footer {
         font-size: calc(.25rem + .5vw);
         /* color: var(--footercolor); */
