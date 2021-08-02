@@ -1,0 +1,20 @@
+/* css for the udemy course */
+
+body {
+    background-color: #F1ECC3;
+}
+
+hr {
+
+    /* background-color: white; */
+    border: none;
+    border-color: grey;
+    border-width: 5px;
+    border-top-style: dotted;
+    height: 0px;
+    width: 33vw;
+}
+
+h1, h3 {
+    color: #66BFBF
+}
