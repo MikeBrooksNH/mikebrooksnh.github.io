@@ -1,0 +1,337 @@
+/*
+
+Project:  GBCC Web Dev I Class project
+Filename: styles.css
+
+*/
+
+* {
+    font-family: cursive, fantasy, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Aref Ruqaa', serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --footercolor: black;
+    --bodybgcolor: white;
+    --bodyfontcolor: grey;
+
+    /* background colors */
+    --stdBGDesktop1: lightBlue;
+    --stdBGDesktop2: wheat;
+    --stdBGTablet: grey;
+    --landscapeBG: aqua;
+    --landscapeFG: brown;
+    --hfbgColor: lightblue;
+    --highlightColor: wheat;
+    --companyLinkColor: blue;
+    --linearHead: linear-gradient(blue, lightblue);
+}
+
+body {
+    background: var(--bodybgcolor);
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.06);
+    color: black;
+    font-family: 'Aref Ruqaa', serif;
+    margin: 0 auto;
+    padding: 2em 2em 4em;
+}
+
+button.inlinestyle {
+    display: inline;
+}
+
+header {
+    margin-top: 0px;
+    padding: .25rem;
+    width: 100%;
+    height: calc(1.5rem + 1.3vw);
+    position: fixed;
+    /* flagged as an error... BUT, using the actual color is not flagged for an error... */
+    background: var(--linearHead);
+    top: 0;
+}
+
+
+form > div {
+    margin-bottom: .5rem;
+}
+
+label {
+    display: block;
+}
+
+form > #formErrors {
+    color: red;
+    display: none;
+    font-family: san-serif;
+    font-weight: bold;
+}
+
+html {
+    font-size: 1em;
+}
+
+img {
+    width: 75%;
+    height: auto;
+}
+
+input {
+    border: .01rem solid black;
+    border-radius: 15px;
+    padding: .5rem;
+
+    width: 250px;
+}
+
+input.error {
+    border: 2px solid red;
+}
+
+input:focus {
+    background: var(--highlightColor);
+}
+
+table,
+tr {
+    border: 1px solid black;
+    line-height: 2;
+    padding-left: 10px;
+    width: 85%;
+}
+
+table,
+td {
+    border: 1px solid black;
+    padding-left: 5px;
+}
+
+textarea {
+    resize: both;
+    border: .01rem solid black;
+    border-radius: 25px;
+    padding: .5rem;
+}
+
+textarea.error {
+    border: 2px solid red;
+}
+
+textarea:focus {
+    background: var(--highlightColor);
+}
+
+section {
+    float: none;
+}
+
+span.highlight {
+    text-shadow: 0 0 3px red, 0 0 6px purple;
+}
+
+span.highlight:hover {
+    text-shadow: none;
+    /*    text-emphasis: strong; */
+}
+
+.company {
+    color: var(--companyLinkColor);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.contact {
+    border: 0px;
+}
+
+.footerstyle {
+    background: linear-gradient(lightblue, blue);
+    bottom: 0;
+    color: black;
+    font-size: 1rem;
+    margin: auto;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.fleft {
+    float: left;
+    width: 50%
+}
+
+.finnerleft {
+    float: left;
+    width: 40%
+}
+
+.fright {
+    border-left: 2px outset black;
+    float: right;
+    padding-left: 3px;
+    width: 45%
+}
+
+.finnerright {
+    border-left: 2px outset black;
+    float: right;
+    width: 45%
+}
+
+.jobdescription {
+    font-size: .85em;
+    line-height: 1.3;
+    padding-left: 20px;
+}
+
+.hiddenjobdesciption {
+    display: none;
+    font-size: .85em;
+    line-height: 1.3;
+    padding-left: 20px;
+}
+
+.hiddenimage {
+
+    display: none;
+}
+
+.jobdescription:hover + .hiddenjobdesciption {
+    display: block;
+}
+
+.navbar {
+    border: .25em outset green;
+    background-color: lightblue;
+    border-radius: .5rem;
+    font-size: .9em;
+    margin-top: .2em;
+    padding: .1rem;
+    text-decoration-color: beige;
+}
+
+.navbar:hover {
+    background-color: wheat;
+}
+
+.resumeHL:hover {
+    /* High level items on the resume will have a visual hint that they are clickable */
+    background-color: var(--highlightColor);
+}
+
+.strongli {
+    font-weight: bold
+}
+
+.tableh1 {
+    color: #222;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-left: 30px;
+}
+
+.techicons {
+    max-width: 100px;
+}
+
+.title {
+    color: #222;
+    font-size: .9em;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+.zest:hover {
+    display: inline;
+    font-size: 1.25em;
+    text-emphasis: double-circle;
+    color: forestgreen;
+}
+
+.fadeinout {
+    animation-name: fadein-out;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadein-out {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media only screen and (min-width: 580px) {
+
+    /* First breakpoint for tablet view */
+    main {
+        /* need to keep some leading when scaling the font size */
+        line-height: calc(1.5rem + 1vw);
+    }
+
+    body {
+        background: var(--bodybgcolor);
+        /*  background: var(--stdBGTablet); */
+        font-size: calc(1rem + 2vw);
+    }
+
+    footer {
+        font-size: calc(.5rem + 1vw);
+        color: var(--footercolor);
+    }
+}
+
+@media only screen and (min-width: 640px) and (orientation: landscape) {
+
+    /* breakpoint for mobile phone in landscape mode */
+    body {
+        background: var(--bodybgcolor);
+        font-size: calc(1rem);
+        /* font-size: calc(1rem + 1.5vw);
+        font-size: calc(1rem + 2vw);
+        line-height: calc(1.5rem + 2vw);
+        background-color: var(--landscapeBG);
+        color: var(--landscapeFG); */
+    }
+
+    footer {
+        font-size: calc(3rem);
+        color: var(--footercolor);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    /* Second breakpoint for desktop view */
+    body {
+        background: var(--bodybgcolor);
+        font-size: calc(1rem + 2vw);
+        /* font-size: calc(1.5rem); 
+        line-height: calc(1.75rem);
+        background: var(--bodybgcolor); */
+    }
+
+    footer {
+        font-size: calc(.25rem);
+        color: var(--footercolor);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+}
