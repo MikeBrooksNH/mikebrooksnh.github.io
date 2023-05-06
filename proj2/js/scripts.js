@@ -46,7 +46,7 @@ function hidejobdescriptions() {
         "crdJD", "sovosJD", "sonusJD", "shivaJD", "aimJD", "teleJD",
         "gbccCW", "sovosCW", "umlCW", "bduckCW", "puppetCW", "dwcCW",
         "votechCW", "oxnardCW", "ulowellCW", "rationalCW", "ishieldCW",
-        "sybaseCW", "udemyCW", "corespondenceCW"
+        "sybaseCW", "udemyCW", "corespondenceCW", "launchDarklyCW"
               ];
 
     var i;
