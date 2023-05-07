@@ -160,7 +160,7 @@ header {
     /* Second breakpoint for desktop view */
     body {
         font-size: calc(1rem + 1vw);
-        line-height: calc(1.5rem + 1.5vw);
+        line-height: calc(1rem + 1.5vw);
         /* background: var(--stdBGDesktop2); */
     }
 
