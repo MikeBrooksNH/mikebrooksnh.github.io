@@ -1,10 +1,8 @@
 /*
-
 Project:  GBCC Web Dev I Class project
 Filename: register.js
 
 Purpose: This set of functions is for form handling
-
 */
 
 var areFormErrors = false;
@@ -20,7 +18,6 @@ var comment = document.getElementById("comment");
 
 // using a message string to customize the error message based on the type of error encountered
 var messageStr = "";
-
 
 function validate() {
     console.log("validating form");
@@ -67,7 +64,6 @@ function isValidPassword() {
         pass2.classList.remove("error");
     }
 
-
     return (retCode);
 }
 
@@ -91,7 +87,6 @@ function isValidEmail() {
         messageStr += "<li>\tinvalid email domain. Valid domains are: students.ccsnh.edu / ccsnh.edu / gmail.com</li>";
         retCode = false;
     }
-
 
     if (!retCode) {
         console.log("there were email validation errors!");
@@ -165,7 +160,6 @@ function isValidDate() {
         messageStr += "<li>You may have entered an incorrect year, it appears you haven't been born yet...</li>";
         retCode = false;
     }
-
 
     if (!retCode) {
         console.log("there were date validation errors!");

@@ -1,23 +1,14 @@
 /*
-
 Project:  GBCC Web Dev I Class project
 Filename: scripts.js
-
 */
 
 var myIntervalTimer = setInterval(showimages, 4000);
 var whichDiv = 1;
 
-/*
+/*    General Routines - used anywhere on the site  */
+/*  Routines specific to handling the resume  */
 
-    General Routines - used anywhere on the site
-
-*/
-/*
-
-    Routines specific to handling the resume
-
-*/
 function hideunhide(elemid) {
     // The intent for this functionis to allow an element to be hiden or made visible
 
