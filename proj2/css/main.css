@@ -1,8 +1,5 @@
 /*
-
-Project:  GBCC Web Dev I Class project
 Filename: main.css
-
 */
 /* There are known issues with the validator and the calc function... */
 * {
@@ -42,7 +39,7 @@ body {
 }
 
 footer {
-    color: var(--footertcolor);
+    color: var(--footercolor);
 }
 
 
@@ -159,13 +156,13 @@ header {
 
     /* Second breakpoint for desktop view */
     body {
-        font-size: calc(1rem + 1vw);
-        line-height: calc(1rem + 1.5vw);
+        font-size: calc(1rem);
+        line-height: calc(1rem);
         /* background: var(--stdBGDesktop2); */
     }
 
     footer {
-        font-size: calc(.25rem + .5vw);
+        font-size: calc(.25rem);
         /* color: var(--footercolor); */
     }
 }

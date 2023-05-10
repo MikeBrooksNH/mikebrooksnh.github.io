@@ -1,16 +1,15 @@
 /*
-Project:  GBCC Web Dev I Class project
 Filename: scripts.js
 */
 
 var myIntervalTimer = setInterval(showimages, 4000);
 var whichDiv = 1;
 
-/*    General Routines - used anywhere on the site  */
+/*  General Routines - used anywhere on the site  */
 /*  Routines specific to handling the resume  */
 
 function hideunhide(elemid) {
-    // The intent for this functionis to allow an element to be hiden or made visible
+    // The intent for this functions to allow an element to be hiden or made visible
 
     var imageID = document.getElementById(elemid);
     console.assert("hideunhide called for " + imageID);
@@ -37,26 +36,21 @@ function hidejobdescriptions() {
         "crdJD", "sovosJD", "sonusJD", "shivaJD", "aimJD", "teleJD",
         "gbccCW", "sovosCW", "umlCW", "bduckCW", "puppetCW", "dwcCW",
         "votechCW", "oxnardCW", "ulowellCW", "rationalCW", "ishieldCW",
-        "sybaseCW", "Udemy2021CW", "udemy2020CW", "cleancodeCW", "udemyCW1","udemyCW2","udemyCW3", "corespondenceCW", "launchDarklyCW"
+        "sybaseCW", "Udemy2021CW", "Udemy2020CW", "udemyCW-2020-1", "udemyCW-2021-1","udemyCW-2021-2","udemyCW-2021-3", "corespondenceCW", "launchDarklyCW"
               ];
-
     var i;
+
     for (i = 0; i < jds.length; i++) {
         try {
             hideunhide(jds[i]);
         } catch (err) {
             console.assert("Error trying to hideunhide " + jds[i] + "\n" + err.message)
         }
-
     }
-
 }
 
-
 /*
-
     Routines specific to the project and contact pages
-
 */
 function showimages() {
 
@@ -69,17 +63,12 @@ function showimages() {
 
     if (whichDiv === 1) {
         document.getElementById("rotateimg2").innerHTML = "";
-
         document.getElementById("rotateimg1").innerHTML = "<img src=img/" + images[parseInt(idx)] + " alt=\"generated image" + parseInt(idx) + "\" class=\"fadeinout techicons\">";
-
         whichDiv = 2;
     } else {
         document.getElementById("rotateimg1").innerHTML = "";
-
         document.getElementById("rotateimg2").innerHTML = "<img src=img/" + images[parseInt(idx)] + " alt=\"generated image" + parseInt(idx) + "\" class=\"fadeinout techicons\">";
-
         whichDiv = 1;
-
     }
 }
 

@@ -1,5 +1,4 @@
 /*
-Project:  GBCC Web Dev I Class project
 Filename: register.js
 
 Purpose: This set of functions is for form handling
